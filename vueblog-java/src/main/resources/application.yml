@@ -1,0 +1,26 @@
+server:
+  port: 8081
+
+# DataSource Config
+spring:
+    DataSource:
+        driver-class-name: com.mysql.cj.jdbc.Driver
+        url: jdbc:mysql://localhost:3306/vueblog?useUnicode=true&useSSL=false&characterEncoding=utf8&serverTimezone=Asia/Shanghai
+        username: root
+        password: admin
+
+mybatis-plus:
+  mapper-locations: classpath*:/mapper/**Mapper.xml
+#  configuration:
+#    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+
+shiro-redis:
+  enable: true
+  redis-manager:
+    host: 127.0.0.1:6379
+
+hexcraft:
+  jwt:
+    secret: ZjRlMmU1MjAzNDM0OGY4NmI2N2NkZTU4MWMwZjllYjU=
+    expire: 604800
+    header: Authorization
